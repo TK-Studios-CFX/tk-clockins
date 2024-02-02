@@ -39,20 +39,3 @@ async function init() {
 }
 
 init();
-
-/*
-
-DELIMITER //
-
-CREATE TRIGGER update_total_before_update
-BEFORE UPDATE ON tk_clockins
-FOR EACH ROW
-BEGIN
-    IF NEW.clockout IS NOT NULL THEN
-        SET NEW.total = NEW.clockout - NEW.clockin;
-    END IF;
-END; //
-
-DELIMITER ;
-
-*/
